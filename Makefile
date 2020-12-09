@@ -5,7 +5,7 @@ createdb:
 	docker exec -it postgres12_alpine createdb --username=root --owner=root assets_db
 
 dropdb:
-	docker exec -it postgres12_alpine dropdb twitter_db 
+	docker exec -it postgres12_alpine dropdb assets_db 
 
 migrateinit:
 	migrate create -ext sql -dir db/migration -seq init_schema

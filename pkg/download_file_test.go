@@ -1,14 +1,13 @@
-package main
+package pkg_test
 
 import (
-	"fmt"
 	"log"
-
+	"testing"
 	"github.com/stanlee321/assets_service/pkg"
-
 )
 
-func main(){
+func TestDownloadFile(t *testing.T) { 
+
 	fileName := "file.pdf"
 
 	URL := "http://201.222.81.2/AnalisisNormativo/normasPDF/9495.pdf"
@@ -19,5 +18,6 @@ func main(){
 		log.Fatal(err)
 	}
 
-	fmt.Printf("File %s downlaod in current working directory", fileName)
+	log.Printf("File %s downlaod in current working directory", fileName)
+
 }

@@ -23,7 +23,10 @@ func NewServer(store db.Store) *Server {
 
 	router.POST("/create_asset", server.createAsset)
 	router.GET("/read_asset/:id", server.getAsset)
+	router.GET("/read_asset_by_internal_id/:id", server.getAssetByInternalID)
+	router.GET("/read_asset_by_asset_name/:name", server.getAssetByAssetName)
 	router.GET("/list_assets", server.listAssets)
+	router.GET("/update_asset", server.updateAssetStatusRequest)
 
 
 	// router.GET("/accounts/:id", server.getAccount)

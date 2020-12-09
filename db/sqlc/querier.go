@@ -10,7 +10,10 @@ type Querier interface {
 	CreateAsset(ctx context.Context, arg CreateAssetParams) (Asset, error)
 	DeleteAsset(ctx context.Context, id int64) error
 	GetAsset(ctx context.Context, id int64) (Asset, error)
-	ListAssets(ctx context.Context, arg ListAssetsParams) ([]Asset, error)
+	GetAssetByAssetName(ctx context.Context, assetName string) (Asset, error)
+	GetAssetByInternalId(ctx context.Context, internalID int64) (Asset, error)
+	ListAssets(ctx context.Context) ([]Asset, error)
+	UpdateAsset(ctx context.Context, arg UpdateAssetParams) (Asset, error)
 }
 
 var _ Querier = (*Queries)(nil)

@@ -11,5 +11,7 @@ type Asset struct {
 	InternalID     int64     `json:"internal_id"`
 	AssetName      string    `json:"asset_name"`
 	AssetCreatedAt string    `json:"asset_created_at"`
+	Status         bool      `json:"status"`
+	AssetLink      string    `json:"asset_link"`
 	CreatedAt      time.Time `json:"created_at"`
 }
